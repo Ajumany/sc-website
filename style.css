@@ -246,21 +246,52 @@ main {
     transform: translateY(0);
 }
 
+/* 変更 */
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
-    .poem-title {
-        font-size: 2.2rem;
+    .container {
+        padding: 0 15px; /* スマートフォンでは左右の余白を少し狭くする */
     }
-    .poem-text {
-        font-size: 1rem;
-    }
+
+    /* ヘッダー */
     .header .container {
         flex-direction: column;
     }
-    .header-nav ul {
+    .header-logo {
+        font-size: 24px;
+    }
+    .header-nav {
         margin-top: 10px;
     }
+    .header-nav li {
+        margin-left: 20px;
+    }
     main {
-        padding-top: 110px;
+        padding-top: 110px; /* 固定ヘッダーが縦に長くなるため、コンテンツ開始位置を下げる */
+    }
+
+    /* メインビジュアル */
+    .hero {
+        height: 50vh; /* 画面の高さに対する割合を少し減らす */
+    }
+    .poem-title {
+        font-size: 2rem; /* タイトルの文字サイズを調整 */
+    }
+    .poem-text {
+        font-size: 1rem; /* ポエム本文の文字サイズを調整 */
+    }
+
+    /* セクション */
+    .section-title {
+        font-size: 2rem; /* セクションタイトルの文字サイズを調整 */
+        margin-bottom: 40px;
+    }
+    .players, .about {
+        padding: 60px 0; /* セクションの上下の余白を狭くする */
+    }
+
+    /* 選手グリッド */
+    .player-grid {
+        gap: 20px; /* カード間の余白を狭くする */
     }
 }
